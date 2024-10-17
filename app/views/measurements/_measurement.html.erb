@@ -1,0 +1,23 @@
+<tr id="<%= dom_id measurement %>" class="tw-bg-white tw-border-b tw-bg-white tw-border-gray-300 tw-hover:bg-gray-700 tw-text-center">
+  <th scope="row" class="tw-px-6 tw-py-4 tw-font-medium tw-text-gray-900 tw-whitespace-nowrap tw-dark:tw-text-white">
+    <%= measurement.user.full_name %>
+  </th>
+  <td class="tw-px-6 tw-py-4">
+    <%= measurement.measurement_type %>
+  </td>
+  <td class="tw-px-6 tw-py-4">
+    <%= "#{measurement.value} #{measurement.unit}" %>
+  </td>
+  <td class="tw-px-6 tw-py-4">
+    <%= measurement.source %>
+  </td>
+  <td class="tw-px-2 tw-py-2 tw-text-ellipsis tw-overflow-hidden tw-max-w-20 tw-whitespace-nowrap">
+    <%= measurement.notes %>
+  </td>
+  <td class="tw-px-6 tw-py-4">
+    <%= format_date_with_time measurement.created_at %>
+  </td>
+  <td class="tw-px-6 tw-py-4 tw-items-center">
+    <%= link_to "Show this measurement", measurement, class: "tw-font-medium tw-text-blue-600 tw-dark:tw-text-blue-500 tw-hover:tw-underline" %>
+  </td>
+</tr>

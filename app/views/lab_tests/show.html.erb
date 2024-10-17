@@ -1,0 +1,14 @@
+<%= render "lab_test", lab_test: @lab_test %>
+
+<div>
+  <%= link_to "Edit this lab test", edit_lab_test_path(@lab_test) %> |
+  <%= link_to "Back to lab tests", lab_tests_path %>
+
+  <%= button_to(
+        "Remove this lab test",
+        @lab_test,
+        method: :delete,
+        data: { turbo_method: :delete, turbo_confirm: "Are you sure?" },
+        class: "tw-mt-6 tw-mr-6 tw-mb-6 tw-bg-red-500 tw-hover:bg-blue-700 tw-text-white tw-font-bold tw-py-2 tw-px-4 tw-rounded"
+      ) %>
+</div>
